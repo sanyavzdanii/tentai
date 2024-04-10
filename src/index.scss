@@ -1,0 +1,11 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "sass/variables";
+@import "sass/header";
+
+// Components
+@import "sass/components/Nav";
+@import "sass/components/Lang";
+
+// Commons
+@import "sass/common";
