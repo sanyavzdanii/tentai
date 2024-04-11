@@ -7,3 +7,99 @@
 .pointer {
   cursor: pointer;
 }
+
+.btn-1 {
+  padding: 11px 16px;
+  background: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+  text-align: center;
+  color: $white;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+  &:hover {
+    @media (min-width: breakpoint-min(xl)) {
+      background: linear-gradient(350.22deg, $menuHover 22.39%, $magentaColor 80.07%);
+    }
+  }
+  &:active {
+    background: linear-gradient(350.22deg, $menuHover 22.39%, $menuHover 80.07%);
+  }
+}
+
+.btn-2 {
+  display: inline-block;
+  position: relative;
+  padding: 11px 16px;
+  background: $white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+  text-align: center;
+  color: $black;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+  border: 2px solid transparent;
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+  }
+  &:hover {
+    @media (min-width: breakpoint-min(xl)) {
+      background: linear-gradient(350.22deg, $menuHover 22.39%, $magentaColor 80.07%);
+    }
+  }
+  &:active {
+    background: linear-gradient(350.22deg, $menuHover 22.39%, $menuHover 80.07%);
+  }
+
+  span {
+    z-index: 5;
+    background-image: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.px-xl-60 {
+  @media (min-width: breakpoint-min(xl)) {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+}
+
+.head-text {
+  font-family: $font700;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  background-image: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (min-width: breakpoint-min(xl)) {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+
+.wrapper {
+  border-radius: 26px 26px 0 0;
+  background-color: $white;
+  box-shadow: 0px -5px 19.4px 0px rgba($black, 0.07);
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}

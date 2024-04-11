@@ -1,0 +1,23 @@
+.hero-section {
+  min-height: 540px;
+
+  &__inner-img {
+    max-width: 599px;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: breakpoint-min(xl)) {
+      margin-top: 75px;
+    }
+  }
+
+  &__inner .btn-1 {
+    svg {
+      fill: transparent;
+    }
+
+    @media (min-width: breakpoint-min(xl)) {
+      margin-left: 112px;
+    }
+  }
+}

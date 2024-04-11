@@ -5,6 +5,7 @@ import {hiddenScroll} from "./helpers";
 import Logo from "./header/Logo";
 import Nav from "./header/Nav";
 import Lang from "./header/Lang";
+import HeroSection from "./header/HeroSection";
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
         url: string
     }
     const menu: Page[] = [
-        {name: 'Дарим призы', url: '#'},
+        {name: 'Дарим призы', url: '#prizy'},
         {name: 'О проекте', url: '#'},
         {name: 'Услуги', url: '#'},
         {name: 'Преимущества', url: '#'},
@@ -49,7 +50,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="header">
+            <header className="header position-fixed w-100">
                 <Container fluid className="d-flex justify-content-between flex-wrap flex-xl-nowrap">
                     <Logo />
                     <div className="d-flex align-items-center">
@@ -58,6 +59,7 @@ export default function Header() {
                     </div>
                 </Container>
             </header>
+            <HeroSection />
             <div className={`menu-backdrop vw-100 vh-100 ${isMobileMenuOpen ? 'show' : ''}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
         </>
     )

@@ -1,0 +1,31 @@
+.team-card {
+  h4 {
+    font-family: $font;
+    font-size: 14px;
+    line-height: 17.6px;
+    font-weight: 500;
+    background-image: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: breakpoint-min(xl)) {
+      font-size: 16px;
+      line-height: 17.6px;
+    }
+  }
+
+  p {
+    font-family: $font;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $menuColor;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}

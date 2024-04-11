@@ -20,10 +20,22 @@
   text-decoration: none;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   &:not(:last-of-type) {
     @media (min-width: breakpoint-min(xl)) {
       margin-right: 24px;
+    }
+  }
+  &:first-of-type {
+    font-weight: 500;
+    color: $menuHover;
+    &:hover {
+      color: rgba($menuHover, 0.83);
+
+      img {
+        opacity: 0.83;
+      }
     }
   }
   &:hover {
