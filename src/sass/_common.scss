@@ -30,43 +30,68 @@
 }
 
 .btn-2 {
-  display: inline-block;
+  cursor : pointer;
+  outline : none;
+  border: none;
   position: relative;
-  padding: 11px 16px;
-  background: $white;
-  border-radius: 8px;
+  z-index: 2;
   font-size: 16px;
   font-weight: 500;
   line-height: 17.6px;
-  text-align: center;
-  color: $black;
-  text-decoration: none;
-  transition: background 0.3s ease-in-out;
-  border: 2px solid transparent;
-  &:before {
-    z-index: -1;
+  padding: 11px 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  background-image: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%), linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  color: $white;
+  &:before,
+  &:after {
     content: '';
     position: absolute;
-    top: 0;
+    z-index: -1;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    background: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+    top: 0;
+    bottom: 0;
+    width: 21px;
+    border: 2px solid $menuHover;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+  }
+  &:after {
+    border: 2px solid $magentaColor;
+    border-left: none;
+    left: auto;
+    right: 0;
+    border-radius: 0 8px 8px 0;
   }
   &:hover {
-    @media (min-width: breakpoint-min(xl)) {
-      background: linear-gradient(350.22deg, $menuHover 22.39%, $magentaColor 80.07%);
+    color: $white;
+    background: linear-gradient(147.26deg, $menuHover 25.72%, $menuHover 75.91%);
+    &:before,
+    &:after {
+      content: unset;
+    }
+    span {
+      background-image: unset !important;
+      color: $white;
+      -webkit-text-fill-color: unset;
     }
   }
   &:active {
-    background: linear-gradient(350.22deg, $menuHover 22.39%, $menuHover 80.07%);
+    background: linear-gradient(350.22deg, rgba($menuHover, 0.6) 22.39%, rgba($menuHover, 0.6) 80.07%);
+    &:before,
+    &:after {
+      content: unset;
+    }
   }
 
   span {
-    z-index: 5;
     background-image: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }

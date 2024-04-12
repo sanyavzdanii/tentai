@@ -2,6 +2,7 @@ import * as React from "react";
 import {Col, Row} from "react-bootstrap";
 import img1 from "./../images/team/1.png";
 import img2 from "./../images/team/2.png";
+import teamCardMoreBg from "./../images/team/team-card-more_bg.svg";
 
 export default function TeamList() {
     const teamData: {img: string, head: string, text: string, name: string, job: string}[] = [
@@ -87,9 +88,9 @@ export default function TeamList() {
                     </Col>
                 )
             })}
-            <Col sm={12}>
-                <a href="#" className="btn-2">
-                    <span>Посмотреть всех</span>
+            <Col sm={12} className="team-card-more d-flex justify-content-center align-items-end" style={{background: `url(${teamCardMoreBg}) 100% 100%`}}>
+                <a href="#" className="mb-4">
+                    <button className="btn-2"><span>Посмотреть всех</span></button>
                 </a>
             </Col>
         </Row>

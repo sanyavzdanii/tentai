@@ -1,0 +1,41 @@
+.connect-wrapper {
+  margin-top: 80px;
+  margin-bottom: 46px;
+  background: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
+  padding: 36px;
+  border-radius: 26px;
+
+  &__text {
+    width: 100%;
+
+    h3 {
+      color: $white;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31.2px;
+
+      span {
+        font-family: $font700;
+      }
+    }
+
+    @media (min-width: breakpoint-min(xl)) {
+      max-width: 622px;
+    }
+  }
+
+  &__hero img {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: breakpoint-min(xl)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      max-width: 567px;
+    }
+  }
+}
