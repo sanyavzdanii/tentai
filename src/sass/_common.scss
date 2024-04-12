@@ -12,6 +12,7 @@
   padding: 11px 16px;
   background: linear-gradient(147.26deg, $menuHover 25.72%, $magentaColor 75.91%);
   border-radius: 8px;
+  border: 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 17.6px;
@@ -127,4 +128,23 @@
 
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.custom-scroll-bar {
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: $white;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: rgba($black, 0.1);
+  }
+
+  @media (max-width: breakpoint-max(lg)) {
+    overflow-y: auto;
+  }
 }

@@ -25,17 +25,36 @@
     }
   }
 
-  &__hero img {
+  &__hero {
+    margin-left: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @media (min-width: breakpoint-min(xl)) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        max-width: 567px;
+        margin-left: unset;
+      }
+    }
+
+    @media (min-width: breakpoint-min(md)) {
+      margin-left: unset;
+    }
+  }
+
+  &__text-market {
     width: 100%;
     height: auto;
+    text-align: center;
 
     @media (min-width: breakpoint-min(xl)) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: auto;
-      max-width: 567px;
+      max-width: 180px;
     }
   }
 }

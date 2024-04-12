@@ -34,9 +34,9 @@ export default function MissionValues() {
             <Col sm={12} className="mb-4">
                 <h2 className="head-text text-center">Миссия и ценности</h2>
             </Col>
-            {cardsData.map((card: Card) => {
+            {cardsData.map((card: Card, index) => {
                 return (
-                    <Col md={6} xl={4}>
+                    <Col md={6} xl={4} key={`card-${index}`}>
                         <div className="mission-card text-center mb-5 mb-xl-0">
                             <img src={card.img} width={304} height={231} alt={card.head}/>
                             <p className="text-uppercase">{card.subHead}</p>

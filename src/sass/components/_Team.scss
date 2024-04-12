@@ -36,3 +36,38 @@
   max-height: 447px;
   height: 100%;
 }
+
+.team-card-back {
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-weight: 500;
+  font-family: $font;
+  font-size: 16px;
+  line-height: 17.6px;
+  background: $white;
+  padding: 16px;
+  border-radius: 19px;
+  box-shadow: 0 4px 41.6px 0 rgba($black, 0.1);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+
+  p {
+    font-weight: 400;
+    font-family: $font;
+    font-size: 14px;
+    line-height: 21px;
+    max-height: calc(100% - 70px);
+    overflow-y: auto;
+  }
+
+  h4 {
+    background: unset;
+    -webkit-text-fill-color: unset;
+    color: $magentaColor;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
