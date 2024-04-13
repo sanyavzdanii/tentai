@@ -35,6 +35,18 @@
   margin-bottom: 80px;
   color: $white;
 
+  &__social {
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    text-decoration: none;
+
+    svg {
+      font-size: 24px;
+    }
+  }
+
   @media (min-width: breakpoint-min(xl)) {
     margin-top: 103px;
     margin-bottom: 155px;
@@ -46,6 +58,7 @@
   background-size: cover !important;
 
   @media (min-width: breakpoint-min(xl)) {
+    min-height: 579px;
     background-size: contain !important;
   }
 }
