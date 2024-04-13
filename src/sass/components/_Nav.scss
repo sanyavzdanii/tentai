@@ -23,6 +23,10 @@
   font-weight: 400;
   transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   &:not(:last-of-type) {
+    @media (min-width: breakpoint-min(md)) {
+      margin-right: 6px;
+    }
+
     @media (min-width: breakpoint-min(xl)) {
       margin-right: 24px;
     }
@@ -42,5 +46,47 @@
     @media (min-width: breakpoint-min(xl)) {
       color: $menuHover;
     }
+  }
+}
+
+.menu {
+  .header-nav {
+    a {
+      @media (max-width: breakpoint-max(md)) {
+        display: block !important;
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        margin: 12px 0;
+      }
+    }
+
+    @media (max-width: breakpoint-max(md)) {
+      margin-top: 50px;
+    }
+  }
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  @media (max-width: breakpoint-max(md)) {
+    position: fixed;
+    top: 71px;
+    left: 0;
+    height: calc(100vh - 170px);
+    background: $white;
+    padding: 25px 20px;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -20px;
+    transition: all 0.3s ease-in-out;
   }
 }

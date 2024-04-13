@@ -1,5 +1,5 @@
 .header {
-  z-index: 100;
+  z-index: 9999;
   top: 0;
   padding: 18px;
   border-radius: 0 0 26px 26px;
@@ -9,4 +9,13 @@
   @media (min-width: breakpoint-min(xl)) {
     padding: 16.5px 48px;
   }
+}
+
+.mobile-menu-opened .header {
+  border-radius: 0;
+}
+
+.menu-btn {
+  font-size: 36px;
+  line-height: 36px;
 }

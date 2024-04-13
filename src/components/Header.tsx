@@ -53,10 +53,12 @@ export default function Header() {
             <header className="header position-fixed w-100">
                 <Container fluid className="d-flex justify-content-between flex-wrap flex-xl-nowrap">
                     <Logo />
-                    <div className="d-flex align-items-center">
+                    <div className={`menu d-flex align-items-center ${isMobileMenuOpen ? 'open' : ''}`}>
                         <Nav menuData={menu} />
                         <Lang />
                     </div>
+                    <div className="menu-btn d-md-none"
+                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>=</div>
                 </Container>
             </header>
             <HeroSection />

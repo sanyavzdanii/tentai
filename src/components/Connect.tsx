@@ -3,6 +3,7 @@ import {Col, Row} from "react-bootstrap";
 import img1 from "./../images/connect/1.svg";
 import img2 from "./../images/connect/AppStore.svg";
 import img3 from "./../images/connect/GooglePlay.svg";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 export default function Connect() {
 
@@ -13,14 +14,14 @@ export default function Connect() {
                     <div className="connect-wrapper__text">
                         <h3 className="mb-4 pb-2 pb-xl-0"><span>Присоединяйтесь уже сейчас</span> и открывайте<br /> для себя мир возможностей вместе с Tentai!</h3>
                         <a href='#' className="connect-wrapper__text-market me-4 mb-3 mb-xl-0 d-inline-block">
-                            <img src={img2} width={180} height={52} alt="app sotre" />
+                            <LazyLoadImage src={img2} width={180} height={52} alt="app sotre" />
                         </a>
                         <a href='#' className="connect-wrapper__text-market mb-4 mb-xl-0 pb-3 pb-xl-0 d-inline-block">
-                            <img src={img3} width={180} height={52} alt="google play" />
+                            <LazyLoadImage src={img3} width={180} height={52} alt="google play" />
                         </a>
                     </div>
                     <div className="connect-wrapper__hero">
-                        <img src={img1} width={567} height={327} alt="Присоединяйтесь уже сейчас" />
+                        <LazyLoadImage src={img1} width={567} height={327} alt="Присоединяйтесь уже сейчас" />
                     </div>
                 </div>
             </Col>

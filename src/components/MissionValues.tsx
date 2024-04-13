@@ -3,6 +3,7 @@ import {Col, Row} from "react-bootstrap";
 import img1 from "./../images/mission/1.svg";
 import img2 from "./../images/mission/2.svg";
 import img3 from "./../images/mission/3.svg";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 export default function MissionValues() {
     const cardsData: {img: string, head: string, subHead: string}[] = [
@@ -38,7 +39,7 @@ export default function MissionValues() {
                 return (
                     <Col md={6} xl={4} key={`card-${index}`}>
                         <div className="mission-card text-center mb-5 mb-xl-0">
-                            <img src={card.img} width={304} height={231} alt={card.head}/>
+                            <LazyLoadImage src={card.img} width={304} height={231} alt={card.head}/>
                             <p className="text-uppercase">{card.subHead}</p>
                             <h3 className="p-3">{card.head}</h3>
                         </div>

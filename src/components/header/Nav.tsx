@@ -1,5 +1,6 @@
 import * as React from "react";
 import box from "./../../images/box.svg";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface Page {
     name: string;
@@ -18,7 +19,7 @@ export default function Nav(props: NavProps) {
                 return (
                     item.url === '#prizy' ?
                         <a key={`menu-item-${index}`} href="#" className="d-flex align-items-center">
-                            <img src={box} alt='box' width={24} height={24} className="me-1" />
+                            <LazyLoadImage src={box} alt='box' width={24} height={24} className="me-1" />
                             {item.name}
                         </a>
                         :

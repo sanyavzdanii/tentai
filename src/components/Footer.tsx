@@ -6,6 +6,7 @@ import soc2 from "./../images/footer/social-2.svg";
 import soc3 from "./../images/footer/social-3.svg";
 import mail from "./../images/footer/email.svg";
 import phone from "./../images/footer/phone.svg";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 export default function Footer() {
 
@@ -15,16 +16,16 @@ export default function Footer() {
                 <Row className="justify-content-center">
                     <Col sm={12} md={6} xl={3} className="position-relative">
                         <div className="mb-4 pb-xl-3">
-                            <img src={logo} alt='box' width={140} height={40}/>
+                            <LazyLoadImage src={logo} alt='box' width={140} height={40}/>
                         </div>
                         <a href="#" className="footer-social mb-2 me-2">
-                            <img src={soc1} alt='appstore' width={42} height={42}/>
+                            <LazyLoadImage src={soc1} alt='appstore' width={42} height={42}/>
                         </a>
                         <a href="#" className="footer-social mb-2 me-2">
-                            <img src={soc2} alt='playstore' width={42} height={42}/>
+                            <LazyLoadImage src={soc2} alt='playstore' width={42} height={42}/>
                         </a>
                         <a href="#" className="footer-social mb-2">
-                            <img src={soc3} alt='appgallery' width={42} height={42}/>
+                            <LazyLoadImage src={soc3} alt='appgallery' width={42} height={42}/>
                         </a>
                     </Col>
                     <Col sm={12} md={6} xl={3} className="position-relative">
@@ -47,19 +48,17 @@ export default function Footer() {
                         <div className="footer-head mb-3">Контакты</div>
                         <a href="mailto:info@tentai.pro"
                            className="footer-link d-flex align-items-center mb-2">
-                            <img src={mail} alt='appstore' width={24} height={24} className="me-3" />
+                            <LazyLoadImage src={mail} alt='appstore' width={24} height={24} className="me-3" />
                             info@tentai.pro
                         </a>
                         <a href="tel:+66123456789"
                            className="footer-link d-flex align-items-center">
-                            <img src={phone} alt='appstore' width={24} height={24} className="me-3" />
+                            <LazyLoadImage src={phone} alt='appstore' width={24} height={24} className="me-3" />
                             +66123456789
                         </a>
                     </Col>
-                    <Col sm={12}>
-                        <Row>
-
-                        </Row>
+                    <Col sm={12} className="copyright mt-4">
+                        © 2024 Tentai – Find it. Choose. Make life more convenient.
                     </Col>
                 </Row>
             </Container>

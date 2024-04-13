@@ -148,3 +148,13 @@
     overflow-y: auto;
   }
 }
+
+.hidden-scroll {
+  overflow: hidden;
+}
+
+html.hidden-scroll {
+  @media (min-width: breakpoint-min(xl)) {
+    margin-right: 16px;
+  }
+}
